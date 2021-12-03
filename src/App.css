@@ -92,3 +92,50 @@ body {
     background: #36bafb;
     border-color: #36bafb;
 }
+
+
+// 英语项目
+.clearfix{
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+.card-content{
+   .item {
+     display: flex;
+     margin: 8px 0;
+     .isNotEdit{
+      border: 1px solid #999;
+      margin-bottom: 3px;
+      height: 32px;
+      line-height: 30px;
+      padding: 0 4px;
+     }
+     .isColor{
+        color: blue;
+     }
+     .isEdit{
+      border: 1px solid #1890ff;
+      margin-bottom: 3px;
+     }
+     .item-div{
+       border-bottom: 1px solid #000;
+       width: 100%;
+       margin: 0 4px;
+       .item-div-input-content{
+            float: left;
+            max-width: 130px;
+         .ant-input{
+           width: 60px;
+         }
+         .anticon {
+             margin-right: 8px;
+             cursor: pointer;
+         }
+       }
+     }
+   }
+}
