@@ -18,6 +18,7 @@ const MyCard = ({ title = '2222' }) => {
   const [data4, setData4] = useState([])
   // 添加词块
   const setPushData = () => {
+    if (data.length > 7) return
     data.push({
       isEdit: true,
       value: '',
@@ -27,6 +28,7 @@ const MyCard = ({ title = '2222' }) => {
   }
   // 添加干扰
   const setDisturbData = () => {
+    if (data4.length > 7) return
     data4.push({
       isEdit: true,
       value: '',
@@ -46,6 +48,15 @@ const MyCard = ({ title = '2222' }) => {
   const save = index => {
     data[index].isEdit = false
     setData([...data])
+  }
+
+  const setIsEdit = index => {
+    data[index].isEdit = true
+    setData([...data])
+  }
+  const setIsEdit2 = index => {
+    data4[index].isEdit = true
+    setData4([...data4])
   }
 
   const setColor = index => {
@@ -72,7 +83,8 @@ const MyCard = ({ title = '2222' }) => {
         <div className="item-div-input-content  isEdit" key={index}>
           <Input
             placeholder="Borderless"
-            maxLength={20}
+            maxLength={7}
+            value={item.value}
             bordered={false}
             onChange={e => {
               changeInput(e, index)
@@ -101,6 +113,9 @@ const MyCard = ({ title = '2222' }) => {
         <div
           className={`item-div-input-content isNotEdit ${_isColor}`}
           key={index}
+          onClick={() => {
+            setIsEdit(index)
+          }}
         >
           {item.value}
         </div>
@@ -130,8 +145,9 @@ const MyCard = ({ title = '2222' }) => {
         <div className="item-div-input-content  isEdit" key={index}>
           <Input
             placeholder="Borderless"
-            maxLength={20}
+            maxLength={7}
             bordered={false}
+            value={item.value}
             onChange={e => {
               data4[index].value = e.target.value
               setData4([...data4])
@@ -154,7 +170,13 @@ const MyCard = ({ title = '2222' }) => {
       )
     } else {
       return (
-        <div className={`item-div-input-content isNotEdit`} key={index}>
+        <div
+          className={`item-div-input-content isNotEdit`}
+          onClick={() => {
+            setIsEdit2(index)
+          }}
+          key={index}
+        >
           {item.value}
         </div>
       )
