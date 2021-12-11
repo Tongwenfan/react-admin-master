@@ -2,36 +2,35 @@ import React, { useEffect, useState } from "react";
 import { Row, Col,DatePicker } from "antd";
 import "../index.less";
 import EchartView from "../EchartView";
-import { chartColor,barOptionConfig } from '../config'
+import { barOptionConfig } from './config'
+import { Select } from 'antd';
 import moment  from "moment";
+const { Option } = Select;
+
 const ChartFooter = () => {
   useEffect(() => {
+  
   }, []);
 
-  const _option2  = {
-    grid:{
-      top:'40px',
-      left:'40px',
-      right:'30px',
-      bottom:'24px'
-    },
+  const [option,setOption] = useState({
     title: {
-      text: 'Referer of a Website',
-      subtext: 'Fake Data',
-      left: 'center'
-    },
-    tooltip: {
-      trigger: 'item'
+      text: '订单来源',
+      left: 'center',
     },
     legend: {
       orient: 'vertical',
-      left: 'left'
+      left: 'left',
+       top: '1%',
+    },
+    tooltip: {
+      trigger: 'item'
     },
     series: [
       {
         name: 'Access From',
         type: 'pie',
-        radius: '50%',
+        radius: '75%',
+        center:['50%','62%'],
         data: [
           { value: 1048, name: 'Search Engine' },
           { value: 735, name: 'Direct' },
@@ -48,30 +47,33 @@ const ChartFooter = () => {
         }
       }
     ]
-  };
+  })
 
-  const _option3 = {
-    grid:{
-      top:'40px',
-      left:'40px',
-      right:'30px',
-      bottom:'24px'
-    },
-    xAxis: {
-      type: 'category',
-      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-    },
-    yAxis: {
-      type: 'value'
-    },
-    series: [
-      {
-        data: [120, 200, 150, 80, 70, 110, 130],
-        type: 'bar'
-      }
-    ]
-  };
+  const [optionRight,setOptionRight] = useState(
+    {
+      title: {
+        text: '订单量统计',
+        left: 'center',
+      },
+      xAxis: {
+        type: 'category',
+        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+      },
+     
+      yAxis: {
+        type: 'value'
+      },
+      series: [
+        {
+          data: [120, 200, 150, 80, 70, 110, 130],
+          type: 'bar'
+        }
+      ]
+    })
 
+
+
+ 
 
   const onChange = (date,dateString) => {
     console.log(date, dateString);
@@ -81,16 +83,24 @@ const ChartFooter = () => {
 
   return (
     <Row>
-        <Col span={24} className="flex" >
-    <div className="flex-item-4 flex-right footerView viewFlow">
-    <EchartView option={_option2} />
-    </div>
-    <div className="flex-item-6 footerView viewFlow">
-    <EchartView option={_option3} />
-    </div>
-    </Col>
-    </Row>
-  
+    <Col span={12}  className="content" >
+        <div className="content-from" >
+            <span>历史日期选择 :</span>
+          <DatePicker size={"Small"}  style={{ margin:'0 8px',width: '200px' }}  onChange={onChange} />
+          </div>
+          <div className="flex">
+          <div className="flex-item-1 view flex-right">
+          <EchartView option={optionRight} />
+          </div>
+          </div>
+          </Col>
+
+          <Col span={11}  className="content" style={{ marginLeft:'4.1%' }} >
+          <div className="flex-item-1 view">
+          <EchartView option={option} />
+          </div>
+            </Col>
+          </Row>
   );
   }
 
