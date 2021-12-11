@@ -10,7 +10,7 @@
     }
     .flex-item-4 {
       display: block;
-      flex: 0 0 40%;
+      flex: 0 0 38%;
       max-width: 38%;
     }
     .flex-item-1{
@@ -33,15 +33,38 @@
   width: 100%;
   margin-top: 12px;
   margin-bottom: 12px;
-  background: #fff;
+  // background: #fff;
   border-radius: 4px;
   padding: 24px;
   position: relative;
+  background: #e0e0e0;
   box-shadow:
     3.2px 1.3px 5.3px rgba(0, 0, 0, 0.028),
     10.7px 4.2px 17.9px rgba(0, 0, 0, 0.042),
     48px 19px 80px rgba(0, 0, 0, 0.07);
+  
+
 }
+.middle{
+  box-shadow:
+    3.2px 1.3px 5.3px rgba(0, 0, 0, 0.028),
+    10.7px 4.2px 17.9px rgba(0, 0, 0, 0.042),
+    48px 19px 80px rgba(0, 0, 0, 0.07);
+    border-radius: 4px;
+    &:hover{
+      box-shadow:  7px 7px 14px #b0b0b0,
+      -7px -7px 14px #ffffff;
+    }
+  .contentMiddle{
+    width: 100%;
+   
+    background: #fff;
+   
+    padding: 24px;
+    position: relative;
+  }
+}
+
 .content{
   width: 100%;
   margin-top: 12px;
@@ -54,18 +77,28 @@
     3.2px 1.3px 5.3px rgba(0, 0, 0, 0.028),
     10.7px 4.2px 17.9px rgba(0, 0, 0, 0.042),
     48px 19px 80px rgba(0, 0, 0, 0.07);
+    &:hover{
+      box-shadow:  7px 7px 14px #b0b0b0,
+      -7px -7px 14px #ffffff;
+    }
     .content-from{
-      margin: 0 0 24px 0;
+      margin: 0 0 12px 0;
     }
 }
 .viewFlow{
-  height: 380px !important;
-}
-.view {
-  height: 380px;
+  height: 320px !important;
   .chartView {
     width: 100%;
-    height: calc(100% - 24px);
+    height: calc(100% - 5px);
+  }
+}
+
+
+.view {
+  height: 390px;
+  .chartView {
+    width: 100%;
+    height: calc(100% - 5px);
   }
 }
 }
