@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>request</title>
+    <g id="1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="13_Icon" transform="translate(-291.000000, -53.000000)">
+            <g id="request" transform="translate(291.000000, 53.000000)">
+                <rect id="area" fill="#1890FF" opacity="1" x="0" y="0" width="16" height="16"></rect>
+                <polyline id="路径" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="6 14 2.71428571 14 2.71428571 2 13 2 13 6"></polyline>
+                <path d="M11.5,9 L11.5,13.5 M11.5,13.5 L14,11 M11.5,13.5 L9,11" id="形状" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(11.500000, 11.500000) scale(1, -1) rotate(-90.000000) translate(-11.500000, -11.500000) "></path>
+                <line x1="6" y1="6" x2="10" y2="6" id="路径-2" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+            </g>
+        </g>
+    </g>
+</svg>

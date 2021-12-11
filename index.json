@@ -1,0 +1,79 @@
+
+
+[
+  // ===============状态===============
+  { // request
+      "startTime":654654,
+      "endTime":1341243,
+      "top": 10
+  },
+  [ // reponse - 排行
+      {
+          "sellerId": "BJAC",
+          "exception": 100,
+          "unshiped": 100,
+          "invoiced": 100
+      },
+      {
+          "sellerId": "A001",
+          "exception": 100,
+          "unshiped": 100,
+          "invoiced": 100
+      }
+  ],
+
+  { // request
+      "startTime":654654,
+      "endTime":1341243
+  },
+  [ // reponse - 总数
+      {"name":"exception", "value":100},
+      {"name":"unshiped", "value":100},
+      {"name":"invoiced", "value":100}
+  ],
+
+
+
+  // ===============来源===============
+  { // request
+      "startTime":654654,
+      "endTime":1341243
+  },
+  [ // reponse - 总数
+      {"name":"Platform", "value":100},
+      {"name":"Datafeed", "value":100},
+      {"name":"Portal", "value":100}
+  ],
+
+
+  // ===============渠道=============== top:10,20,50
+  { // request
+      "startTime":654654,
+      "endTime":1341243,
+      "top": 10
+  },
+  [ // reponse - top
+      {"name":"eBay", "value":100},
+      {"name":"Amaon", "value":100},
+      {"name":"tongtool", "value":100}
+  ],
+
+  
+  // ===============seller/platform 趋势=============== 按小时统计，默认当天，每个Platform
+  // 维度：top、platform/seller、按小时统计
+  { // request
+      "startTime":654654,
+      "endTime":1341243,
+      "top": 10
+  },
+  {
+      "timeList": ["12/01 11", "12/01 12", "12/02 01", "12/02 02"],
+      "timeData": [
+          {"name":"eBay", "value":[10,20,30,40]},
+          {"name":"Amaon", "value":[10,20,30,40]},
+          {"name":"tongtool", "value":[10,20,30,40]}
+      ]
+  }
+
+
+]

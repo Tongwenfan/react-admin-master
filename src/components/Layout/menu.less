@@ -1,0 +1,107 @@
+.menu-wrap {
+  width: 240px;
+  height: 100vh;
+  overflow: hidden;
+  padding-top: 33px;
+  transition: all .15s cubic-bezier(.215,.61,.355,1),margin .3s cubic-bezier(.645,.045,.355,1),color .3s;
+  background-color: #001123;
+  position: relative;
+  .logo-wrap {
+    cursor: pointer;
+    margin: 0 auto 30px auto;
+    text-align: center;
+  }
+  .ant-menu {
+    width: 100%;
+    color: #D1E3F6;
+    background: #001123;
+    padding: 0 10px;
+    .ant-menu {
+      padding: 0;
+    }
+    &.ant-menu-inline-collapsed {
+      > .ant-menu-item {
+        padding: 12px 0 0 20px!important;
+      }
+      .ant-menu-submenu {
+        .ant-menu-submenu-title {
+          padding: 12px 0 0 20px!important;
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+    .ant-menu-item {
+      margin: 0;
+      height: 60px;
+      padding-left: 15px!important;
+      border-radius: 8px;
+      &::after {
+        border: none;
+      }
+    }
+    
+    .ant-menu-submenu {
+      &.ant-menu-submenu-active {
+        .anticon {
+          color: #fff;
+        }
+        .ant-menu-title-content {
+          color: #fff;
+        }
+        .ant-menu-submenu-arrow {
+          color: #fff;
+        }
+      }
+      &.ant-menu-submenu-selected {
+        color: #fff;
+      }
+      .ant-menu-submenu-title {
+        height: 60px;
+      }
+      .ant-menu-submenu-arrow {
+        color: #fff;
+      }
+
+      .ant-menu-submenu-title {
+        margin: 0;
+        padding-left: 15px!important;
+        &:hover {
+          color: #fff;
+        }
+      }
+      .ant-menu-item {
+        padding-left: 45px!important;
+      }
+    }
+
+    .ant-menu-item-selected {
+      color: #fff;
+      background-color: #1C2F44;
+    }
+
+    .ant-menu-item-active {
+      color: #fff;
+    }
+  }
+  .put-away {
+    color: #D1E3F6;
+    padding: 25px;
+    cursor: pointer;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    .icon {
+      transition: all .15s ease-in;
+      &.rotote {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .ant-menu-inline, .ant-menu-vertical, .ant-menu-vertical-left{
+    border-right-color: transparent;
+  }
+}

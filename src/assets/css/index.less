@@ -1,0 +1,315 @@
+@import url('./variable.css');
+@import url('./layout.less');
+@import url('./constants.less');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1;
+}
+
+//---- 全局重写antd组件样式 -----//
+
+a {
+  color: var(--themeColor);
+}
+
+/*修改table横向滚动条的滚动条样式*/
+.ant-table-content::-webkit-scrollbar{
+  width: 6px;
+  height: 6px;
+}
+.ant-table-content::-webkit-scrollbar-track{
+  background: #fff;
+  border-radius:2px;
+}
+.ant-table-content::-webkit-scrollbar-thumb{
+  background: #eaeaea;
+  border-radius:10px;
+}
+.ant-table-content::-webkit-scrollbar-thumb:hover{
+  background: #999;
+}
+.ant-table-content::-webkit-scrollbar-corner{
+  background: #ccc;
+}
+.ant-table-content{
+  padding: 0 5px;
+}
+
+
+// 重写基本表单组件样式
+.ant-input, .ant-btn, .ant-picker {
+  border-radius: 8px!important;
+}
+.ant-btn-primary {
+  background-color: var(--themeColor);
+}
+.ant-btn {
+  min-width: 120px;
+  font-weight: bold;
+  &:hover {
+    .anticon {
+      color: #40a9ff;
+    }
+  }
+  .anticon + span, span + .anticon {
+    margin-left: 4px;
+  }
+}
+.ant-select {
+  .ant-select-selector {
+    border-radius: 8px!important;
+  }
+}
+.ant-input-number {
+  overflow: hidden;
+  border-radius: 8px!important;
+}
+
+.ant-input-group-wrapper {
+  .ant-input {
+    border-top-left-radius: 0!important;
+    border-bottom-left-radius: 0!important;
+  }
+  .ant-input-affix-wrapper {
+    border-top-right-radius: 8px!important;
+    border-bottom-right-radius: 8px!important;
+  }
+  .ant-input-group-addon {
+    border-top-left-radius: 8px!important;
+    border-bottom-left-radius: 8px!important;
+  }
+}
+
+
+
+// 表单样式
+.ant-form {
+  .ant-form-item-label {
+    label {
+      color: #292621;
+    }
+  }
+}
+
+.ant-form-vertical .ant-form-item-label,
+.ant-col-24.ant-form-item-label,
+.ant-col-xl-24.ant-form-item-label {
+  padding-bottom: 4px!important;
+}
+// 压缩表单换行高度
+.ant-form-item {
+  margin-bottom: 16px!important;
+}
+
+// 重写表格样式
+.ant-table {
+  .ant-table-placeholder {
+    display: none;
+  }
+  .ant-table-thead {
+    .ant-table-cell {
+      font-weight: bold;
+      color: #292621;
+      height: 40px;
+      padding: 0 24px !important;
+      background: var(--tableBgTitle);
+    }
+  }
+  .ant-table-tbody {
+    .ant-table-row {
+      &:hover {
+        .ant-table-cell {
+          background-color: var(--tableHoverRow)!important;
+        }
+      }
+      &:nth-of-type(odd) {
+        background-color: var(--tableRowLight);
+        .ant-table-cell-fix-left{
+          background-color: var(--tableRowLight);
+        }
+      }
+    }
+    .ant-table-cell{
+      height: 40px;
+      padding: 0 24px !important;
+      // 没有内容的时候 消除滚动条
+      .ant-table-expanded-row-fixed{
+        // margin: -16px -21px;
+        display: none;
+      }
+    }
+  }
+  &.ant-table-fixed-column {
+    .ant-table-tbody {
+      .ant-table-row {
+        &:nth-of-type(even) {
+          background-color: var(--tableRowLight);
+          .ant-table-cell-fix-left, .ant-table-cell-fix-right {
+            background-color: var(--tableRowLight);
+          }
+        }
+        &:nth-of-type(odd) {
+          background-color: #fff;
+          .ant-table-cell-fix-left {
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// 重写分页信息
+.ant-pagination {
+  .ant-pagination-item {
+    // border-radius: 4px;
+  }
+  .ant-pagination-item-active {
+    background-color: var(--themeColor);
+    a {
+      color: #fff;
+    }
+    &:hover{
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+// 重写弹窗样式
+.ant-modal-content {
+  overflow: hidden;
+  border-radius: 8px!important;
+  .ant-modal-header {
+    .ant-modal-title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+}
+
+// 设置无边框modal样式
+.no-border-modal{
+  .ant-modal-header{
+    border-bottom: none;
+  }
+  .ant-modal-footer{
+    border-top: none;
+  }
+}
+
+//---- 全局重写antd组件样式 -----//
+
+
+// 列表状态显示
+.table-status-wrap {
+  > span {
+    display: inline-block;
+  }
+  .status {
+    height: 6px;
+    flex: 0 0 6px;
+    margin-right: 5px;
+    border-radius: 6px;
+    &.New-request {
+      background-color: var(--New-request);
+    }
+    &.Rejected-request {
+      background-color: var(--Rejected-request);
+    }
+    &.Submitted-request {
+      background-color: var(--Submitted-request);
+    }
+    &.Approved-request {
+      background-color: var(--Approved-request);
+    }
+    &.Closed-request {
+      background-color: var(--Closed-request);
+    }
+    &.Cancelled-request {
+      background-color: var(--Cancelled-request);
+    }
+
+
+
+    &.New {
+      background-color: var(--New);
+    }
+    &.Submitted, &.Payable, &.BalanceRefund {
+      background-color: var(--Submitted);
+    }
+    &.Pending {
+      background-color: var(--Pending);
+    }
+    &.Suspended {
+      background-color: var(--Suspended);
+    }
+    &.Approved {
+      background-color: var(--Approved);
+    }
+    &.Documentation {
+      background-color: var(--Documentation);
+    }
+    &.UnderReview {
+      background-color: var(--UnderReview);
+    }
+    &.Booking, &.Receivable, &.OrderRefund{
+      background-color: var(--Booking);
+    }
+    &.Booked {
+      background-color: var(--Booked);
+    }
+    &.Cancelled {
+      background-color: var(--Cancelled);
+    }
+    &.Settlement {
+      background-color: var(--Settlement);
+    }
+    &.Deactivated {
+      background-color: var(--Deactivated);
+    }
+    &.Rejected {
+      background-color: var(--Closed);
+    }
+    &.Closed,&.Enabled {
+      background-color: var(--Settlement);
+    }
+    &.Collected {
+      background-color: var(--Settlement);
+    }
+    &.Not.Collected {
+      background-color: var(--NotCollected);
+    }
+    &.Disabled{
+      background-color: var(--Disabled);
+    }
+  }
+}
+
+// 设置全局下拉菜单圆角
+.action-dropdown {
+  .ant-dropdown-menu{
+    border-radius: 8px;
+  }
+}
+
+// 错误页面不显示
+#react-refresh-overlay{
+  display: none !important;
+}
+
+.text-overflow{
+  overflow: hidden;
+  /*文本不会换行*/
+  white-space: nowrap;
+  /*当文本溢出包含元素时，以省略号表示超出的文本*/
+  text-overflow: ellipsis;
+}

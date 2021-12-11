@@ -1,0 +1,83 @@
+.flex-cc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-sb {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+}
+
+.flex-sb-flow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: start;
+}
+
+.flex-bc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-sc {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.flex-col-sb {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flex-col-end {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.flex-col-cc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.clamp2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.break-word {
+  word-wrap: break-word;
+}
+
+.Loop(@index) when (@index<101){
+  .w-@{index}{
+    width: @index * 1%;
+  }
+  .Loop(@index+1);
+}
+.Loop(0);

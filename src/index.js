@@ -1,23 +1,49 @@
-import '@babel/polyfill'
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
-import {BrowserRouter} from 'react-router-dom'
-import { Provider} from 'mobx-react'
-import { LocaleProvider } from 'antd'
-import zh_CN from 'antd/lib/locale-provider/zh_CN'
-import store from './store'
 
-//打包时，用的HashRouter并加上了basename，因为放在服务器的二级目录下
-ReactDOM.render(
-  <BrowserRouter>
-    <LocaleProvider locale={zh_CN}>
-      <Provider {...store}>
-        <App/>
-      </Provider>
-    </LocaleProvider>
-  </BrowserRouter>,
-  document.getElementById('root'));
-registerServiceWorker();
+import React from 'react'
+import ReactDom from 'react-dom'
+import { Provider } from 'react-redux'
+
+import store from './store'
+import App from './app'
+// import './i18n'
+import './assets/css/index.less'
+  // eslint-disable-next-line no-console
+  // 此代码开启可以删除插件传来的message
+// if (process.env.local && process.env.local === "dev") {
+//   let logOfConsole = []
+//   let timeOut = null
+//   let _log = console.log;
+//   console.log = function () {
+//     logOfConsole.push({method: 'log', arguments: arguments});
+//     return _log.apply(console, arguments);
+//   };
+
+//   window.addEventListener("message", function (event) {
+//     const { origin, data } = event;
+//     const { source, payload } = data;
+//     if (origin === "http://localhost:10000") {
+//       if (
+//         (source === "react-devtools-content-script" ||
+//           source === "react-devtools-bridge") &&
+//         payload !== undefined
+//       ) {
+//           clearTimeout(timeOut)
+//           timeOut = setTimeout(()=>{
+//               console.clear()
+//               logOfConsole.map(item => _log.apply(console, item.arguments));
+//               logOfConsole = []
+//           }, 1200)
+//       }
+//     }
+//   });
+// }
+
+
+ReactDom.render(
+  <Provider store={ store }>
+    <App />
+  </Provider>,
+  document.getElementById('app')
+)
+
+

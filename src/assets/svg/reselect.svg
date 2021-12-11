@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="29px" viewBox="0 0 29 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon备份 3</title>
+    <g id="1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="9_InvoiceList_ReceivableDetail2" transform="translate(-777.000000, -1032.000000)">
+            <g id="icon备份-3" transform="translate(779.000000, 1034.000000)">
+                <rect id="area" fill="#D8D8D8" opacity="0" x="0.727922061" y="0.727922061" width="24" height="24"></rect>
+                <g id="编组-4" transform="translate(12.727922, 12.727922) rotate(45.000000) translate(-12.727922, -12.727922) translate(3.727922, 3.727922)" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <g id="编组-6">
+                        <path d="M13,7 L18,9 C18,4.02943725 13.9705627,0 9,0 C5.849876,0 3.07775193,1.61841008 1.46974517,4.06911286" id="路径"></path>
+                        <path d="M11.5302548,16 L16.5302548,18 C16.5302548,13.0294373 12.5008176,9 7.53025483,9 C4.38013083,9 1.60800676,10.6184101 0,13.0691129" id="路径备份" transform="translate(8.265127, 13.500000) rotate(-180.000000) translate(-8.265127, -13.500000) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

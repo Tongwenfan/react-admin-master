@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>5</title>
+    <g id="1" stroke="currentColor" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="13_Icon" transform="translate(-203.000000, -162.000000)">
+            <g id="5" transform="translate(203.000000, 162.000000)">
+                <rect id="area" fill="currentColor" opacity="0" x="0" y="0" width="20" height="20"></rect>
+                <rect id="矩形" stroke="currentColor" stroke-linejoin="round" x="5" y="1" width="13" height="14" rx="2"></rect>
+                <line x1="8" y1="6" x2="11.5" y2="6" id="路径" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></line>
+                <line x1="8" y1="9" x2="15" y2="9" id="路径" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></line>
+                <line x1="8" y1="12" x2="13" y2="12" id="路径备份" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></line>
+                <path d="M15,15 L15,17 C15,18.1045695 14.1045695,19 13,19 L4,19 C2.8954305,19 2,18.1045695 2,17 L2,7 C2,5.8954305 2.8954305,5 4,5 L5,5" id="路径" stroke="currentColor" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

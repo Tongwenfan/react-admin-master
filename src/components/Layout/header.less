@@ -1,0 +1,31 @@
+.header-wrap {
+  padding: 0 24px;
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  &.active {
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    background-color: #fff;
+  }
+  .avatar-name {
+    color: #292621;
+    font-weight: bold;
+  }
+  .operation {
+    .setting-wrap {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      border-radius: 30px;
+      background-color: #fff;
+    }
+  }
+}
+
+.seeting-dropdown {
+  .ant-dropdown-menu{
+    border-radius: 8px;
+  }
+}

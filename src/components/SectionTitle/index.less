@@ -1,0 +1,16 @@
+.section-title {
+  line-height: 1;
+  position: relative;
+  padding-left: 10px;
+  color: #292621;
+  font-weight: bold;
+  &::after {
+    content: '';
+    width: 4px;
+    height: 12px;
+    background-color: var(--sectionTitle);
+    position: absolute;
+    left: 0;
+    top: 2px;
+  }
+}
